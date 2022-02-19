@@ -1,12 +1,13 @@
 import {Controller, Get} from "@nestjs/common";
+import {AppService} from "./app.service";
 
 @Controller('/api')
 export class AppController {
+
+    constructor(private appService: AppService) {}
+
     @Get('/info')
     getInfo() {
-        return ({
-            projectName: 'LeeChat',
-            apiVersion: '0.0.1',
-        })
+        return this.appService.getInfoAboutProject();
     }
 }
