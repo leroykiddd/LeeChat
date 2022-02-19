@@ -1,5 +1,8 @@
 # lib
-/node_modules
+node_modules/
 
 # dev mode
 .env.dev
+
+dist/
+build/
