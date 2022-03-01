@@ -1,6 +1,6 @@
-import React from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import { privateRoutes, publicRoutes } from 'src/router';
+import React from "react";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { privateRoutes, publicRoutes } from "src/router";
 
 const AppRouter = () => {
   const isAuth = false;

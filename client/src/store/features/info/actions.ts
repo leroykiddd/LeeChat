@@ -1,6 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IInfo } from 'src/store/features/info/types';
-import { fetchInfo } from 'src/store/features/info/infoSlice';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IInfo } from "src/store/features/info/types";
+import { fetchInfo } from "src/store/features/info/infoSlice";
 
 export interface IBookingReviewsState {
   data: IInfo | null;
@@ -11,17 +11,17 @@ export interface IBookingReviewsState {
 const initialState: IBookingReviewsState = {
   data: null,
   isLoading: false,
-  error: '',
+  error: "",
 };
 
 export const infoSlice = createSlice({
-  name: 'info',
+  name: "info",
   initialState,
   reducers: {},
   extraReducers: {
     [fetchInfo.fulfilled.type]: (state, action: PayloadAction<IInfo>) => {
       state.isLoading = false;
-      state.error = '';
+      state.error = "";
       state.data = action.payload;
     },
     [fetchInfo.pending.type]: (state) => {

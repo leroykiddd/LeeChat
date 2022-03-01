@@ -1,7 +1,7 @@
 module.exports = {
   tabWidth: 2,
   useTabs: false,
-  singleQuote: true,
+  singleQuote: false,
   trailingComma: "all",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
